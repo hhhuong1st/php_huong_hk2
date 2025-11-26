@@ -12,3 +12,13 @@
     $sB =  $sbyte*8;
     echo "<br> Số Bit của tập tin là: $sB";
 ?>
+
+<?php
+$filename = "vd1.txt";
+$sgiay = fileatime($filename);
+echo "<br>Thời gian truy cập file là: $sgiay giây";
+$stime = fileatime($filename)/(24*60*60);
+echo "<br>Thời gian truy cập file là: $stime ngày";
+
+
+?>
