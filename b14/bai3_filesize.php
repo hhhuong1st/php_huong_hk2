@@ -14,11 +14,9 @@
 ?>
 
 <?php
-$filename = "vd1.txt";
-$sgiay = fileatime($filename);
-echo "<br>Thời gian truy cập file là: $sgiay giây";
-$stime = fileatime($filename)/(24*60*60);
-echo "<br>Thời gian truy cập file là: $stime ngày";
-
-
+    $filename = "vd1.txt";
+    $sgiay = fileatime($filename);
+    echo "<br>Thời gian truy cập file là: $sgiay giây";
+    $stime = fileatime($filename)/(24*60*60);
+    echo "<br>Thời gian truy cập file là: $stime ngày";
 ?>
