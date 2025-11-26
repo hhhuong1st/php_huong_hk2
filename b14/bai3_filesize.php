@@ -19,4 +19,10 @@
     echo "<br>Thời gian truy cập file là: $sgiay giây";
     $stime = fileatime($filename)/(24*60*60);
     echo "<br>Thời gian truy cập file là: $stime ngày";
+
+    $ngay = date("d/m/y H:i:s A", $sgiay);
+    echo "<br> Ngày là: $ngay";
+
+    $ngay = date("d-m-y", $sgiay);
+    echo "<br> Ngày là: $ngay";
 ?>
