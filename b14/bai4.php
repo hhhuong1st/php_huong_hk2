@@ -1,7 +1,8 @@
 <?php
     $ck_name = "hoten";
     $ck_value = "Huỳnh Huyền Hương";
-    setcookie ($ck_name, $ck_value, time()+(86400*30),"/")
+    $ck_value_new = "Huỳnh Huyền Hương 1234";
+    setcookie ($ck_name, $ck_value_new, time()+(86400*30),"/")
 ?>
 
 <!DOCTYPE html>
@@ -18,7 +19,7 @@
         }
         else {
             echo "Cookie đã được tạo";
-            echo "<br>Với giá trị là: $ck_value";
+            echo "<br> Với giá trị là: $ck_value_new";
         }
 
     ?>
