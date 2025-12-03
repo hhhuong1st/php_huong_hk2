@@ -14,8 +14,9 @@
         // Kiểm tra dữ liệu nhập
         if(isset($_POST['txtchuoi'])){
             $s1 = $_POST['txtchuoi'];
-            echo "<br> <br> Chuỗi 1 là: ".$s1;
+            echo "<br> <hr> Chuỗi 1 là: ".$s1;
             echo "<br>Chuỗi s1 chuyển thành chữ hoa là: ".strtoupper($s1);
+            echo "<br>Chiều dài chuỗi s1 là: " .strlen($s1);
         }
     ?>
 </body>
