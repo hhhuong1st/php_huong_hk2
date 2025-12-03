@@ -15,8 +15,27 @@
         // Kiểm tra dữ liệu nhập
         if(isset($_POST['txtspt'])){
             $spt = $_POST['txtspt'];
-            echo "<br> <hr> Số phần tử ".$spt;
+            // echo "<br>" . $spt;
+            echo "<br>";
+
+            $gtmin=0;
+            $gtmax = 50;
+            $mangA = [];
+            for ($i = 1; $i <= $spt; $i ++){
+                $snn = rand($gtmin,$gtmax);
+                $mangA[] = $snn;
+                // echo $snn;
+                // echo ", ";
             }
+            // Hiển thị cách 1
+            echo "Hiển thị mảng cách 1 là: ";
+            echo "Mảng A là: ";
+            print_r($mangA);
+            // Hiển thị cách 2
+            echo "<br> <br> Hiển thị mảng cách 2 là: ";
+            echo implode (", ", $mangA);
+            
+        }
     ?>
 </body>
 </html>
