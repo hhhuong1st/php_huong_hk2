@@ -32,7 +32,17 @@
             echo "Mảng A là: ";
             print_r($mangA);
             // Hiển thị cách 2
-            echo "<br> <br> Hiển thị mảng cách 2 là: ";
+            echo "<br> Hiển thị mảng cách 2 là: ";
+            echo implode (", ", $mangA);
+
+            // Thêm vào cuối mảng
+            array_push($mangA, 2, 3);
+            echo "<br>Mảng A sau khi thêm: ";
+            echo implode (", ", $mangA);
+
+            // Xoá phần tử cuối mảng
+            array_pop($mangA);
+            echo "<br>Mảng A sau khi xoá: ";
             echo implode (", ", $mangA);
             
         }
