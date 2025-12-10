@@ -39,7 +39,7 @@
             margin-top: 15px; 
         }
 
-        form {
+        .baitap1 {
             background: #f1eee3cc; 
             padding: 30px;
             margin-top: 40px;
@@ -84,41 +84,41 @@
 </head>
 <body>
     <div class="baitap1">
-    <form action="#" method="post">
-        <h2>VCT xử lí mảng</h2>
-        <div class="khung">
-            Nhập số phần tử: <input type="text" name="txts" value="<?php if(isset($_POST['txts'])) echo $_POST['txts']; ?>"> <br> 
-            Giá trị thêm: <input type="text" name="txtgt" value="<?php if(isset($_POST['txtgt'])) echo $_POST['txtgt']; ?>"> <br>
-            <input class="sm" type="submit" value="Xử lý"> 
-        </div>
-    </form>
+        <form action="#" method="post">
+            <h2>VCT xử lí mảng</h2>
+            <div class="khung">
+                Nhập số phần tử: <input type="text" name="txts" value="<?php if(isset($_POST['txts'])) echo $_POST['txts']; ?>"> <br> 
+                Giá trị thêm: <input type="text" name="txtgt" value="<?php if(isset($_POST['txtgt'])) echo $_POST['txtgt']; ?>"> <br>
+                <input class="sm" type="submit" value="Xử lý"> 
+            </div>
+        </form>
 
-    <?php
-        if(isset($_POST['txts']) && isset($_POST['txtgt'])){
-            $spt = $_POST['txts'];
-            $gt = $_POST['txtgt'];
+        <?php
+            if(isset($_POST['txts']) && isset($_POST['txtgt'])){
+                $spt = $_POST['txts'];
+                $gt = $_POST['txtgt'];
 
-            $mangA = [];
-            for ($i = 1; $i <= $spt; $i++) {
-                $mangA [] = rand(0, 20);
+                $mangA = [];
+                for ($i = 1; $i <= $spt; $i++) {
+                    $mangA [] = rand(0, 20);
+                }
+
+                echo '<p class="cauhoi">Mảng được tạo:</p>';
+                echo '<p class="cautraloi" style="color: blue;">'.implode(", ", $mangA).'</p>';
+
+                $mangA[] = $gt;
+                echo '<p class="cauhoi">Mảng sau khi thêm giá trị '.$gt.':</p>';
+                echo '<p class="cautraloi" style="color: green;">'.implode(", ", $mangA).'</p>';
+
+                array_shift($mangA);
+                echo '<p class="cauhoi">Mảng sau khi xóa phần tử đầu tiên:</p>';
+                echo '<p class="cautraloi" style="color: orange;">'.implode(", ", $mangA).'</p>';
+
+                $tong = array_sum($mangA);
+                echo '<p class="cauhoi">Tổng các phần tử trong mảng:</p>';
+                echo '<p class="cautraloi" style="color: purple;">'.$tong.'</p>';
             }
-
-            echo '<p class="cauhoi">Mảng được tạo:</p>';
-            echo '<p class="cautraloi" style="color: blue;">'.implode(", ", $mangA).'</p>';
-
-            $mangA[] = $gt;
-            echo '<p class="cauhoi">Mảng sau khi thêm giá trị '.$gt.':</p>';
-            echo '<p class="cautraloi" style="color: green;">'.implode(", ", $mangA).'</p>';
-
-            array_shift($mangA);
-            echo '<p class="cauhoi">Mảng sau khi xóa phần tử đầu tiên:</p>';
-            echo '<p class="cautraloi" style="color: orange;">'.implode(", ", $mangA).'</p>';
-
-            $tong = array_sum($mangA);
-            echo '<p class="cauhoi">Tổng các phần tử trong mảng:</p>';
-            echo '<p class="cautraloi" style="color: purple;">'.$tong.'</p>';
-        }
-    ?>
+        ?>
     </div>
 </body>
 </html>
