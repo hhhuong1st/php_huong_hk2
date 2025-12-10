@@ -106,22 +106,20 @@
                     $mangB [] = rand(0, 10);
                 }
 
-                $mangA[] = $gt;
-                echo '<p class="cauhoi">Mảng sau khi thêm giá trị '.$gt.':</p>';
-                echo '<p class="cautraloi" style="color: green;">'.implode(", ", $mangA).'</p>';
+                echo '<p class="cauhoi">Mảng được tạo A:</p>';
+                echo '<p class="cautraloi" style="color: blue;">'.implode(", ", $mangA).'</p>';
 
-                $mangA[] = $gt;
-                echo '<p class="cauhoi">Mảng sau khi thêm giá trị '.$gt.':</p>';
-                echo '<p class="cautraloi" style="color: green;">'.implode(", ", $mangA).'</p>';
+                echo '<p class="cauhoi">Mảng được tạo B:</p>';
+                echo '<p class="cautraloi" style="color: blue;">'.implode(", ", $mangB).'</p>';
 
                 // Thêm giá trị vào mảng A
                 $mangA[] = $gt;
-                echo '<p class="cauhoi">Câu 2:</p>';
+                echo '<p class="cauhoi">Mảng A sau khi thêm giá trị vào cuối: </p>';
                 echo '<p class="cautraloi" style="color: green;">Mảng A sau khi thêm giá trị: [' . implode(", ", $mangA) . ']</p>';
 
                 // Ghép 2 mảng thành mảng C
                 $mangC = array_merge($mangA, $mangB);
-                echo '<p class="cauhoi">Câu 3:</p>';
+                echo '<p class="cauhoi">Ghép 2 mảng:</p>';
                 echo '<p class="cautraloi" style="color: purple;">Mảng C = A + B: [' . implode(", ", $mangC) . ']</p>';
 
                 // Lấy các phần tử chẵn từ mảng B
@@ -132,7 +130,7 @@
                     }
                 }
 
-                echo '<p class="cauhoi">Câu 4:</p>';
+                echo '<p class="cauhoi">Lấy các phần tử chẵn từ mảng B:</p>';
                 echo '<p class="cautraloi" style="color: orange;">Các số chẵn của mảng B: [' . implode(", ", $chan) . ']</p>';
 
             }
