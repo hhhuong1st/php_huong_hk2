@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Xử lý mảng số nguyên</title>
     <style>
+        /* .baitap1{
+            background: #f1eee3cc; 
+        } */
         body {
             font-family: 'Segoe UI', sans-serif;
             /* background: linear-gradient(135deg, #dfe9f3, #fceef5); */
@@ -13,6 +16,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            /* background: #f1eee3cc;  */
         }
 
         .khung{
@@ -22,7 +26,7 @@
             display: block;         
             width: fit-content;     
             margin: 10px auto;       
-            text-align: left;
+            text-align: center;
              
             
         }
@@ -32,11 +36,7 @@
             /* border: none; */
             padding: 8px;
             text-align: center;
-            /* margin-top: 15px;  */
-            display: block;         
-            width: fit-content;     
-            margin: 10px auto;       
-
+            margin-top: 15px; 
         }
 
         form {
@@ -80,10 +80,10 @@
             font-size: 18px;
             margin-top: 10px;
         }
-
     </style>
 </head>
 <body>
+    <div class="baitap1">
     <form action="#" method="post">
         <h2>VCT xử lí mảng</h2>
         <div class="khung">
@@ -98,26 +98,27 @@
             $spt = $_POST['txts'];
             $gt = $_POST['txtgt'];
 
-            // 1. Tạo mảng ngẫu nhiên với n phần tử giá trị từ 0 đến 20
             $mangA = [];
             for ($i = 1; $i <= $spt; $i++) {
-                $snn = rand(0, 20);
-                $mangA [] = $snn;
+                $mangA [] = rand(0, 20);
             }
-            echo "<br>" . "<strong>Mảng được tạo là:</strong> " . implode(", ", $mangA) . "<br>";
 
-            // 2. Thêm giá trị vào cuối mảng
+            echo '<p class="cauhoi">Mảng được tạo:</p>';
+            echo '<p class="cautraloi" style="color: blue;">'.implode(", ", $mangA).'</p>';
+
             $mangA[] = $gt;
-            echo "<strong>Mảng sau khi thêm giá trị $gt:</strong> " . implode(", ", $mangA) . "<br>";
+            echo '<p class="cauhoi">Mảng sau khi thêm giá trị '.$gt.':</p>';
+            echo '<p class="cautraloi" style="color: green;">'.implode(", ", $mangA).'</p>';
 
-            // 3. Xóa phần tử đầu tiên của mảng
             array_shift($mangA);
-            echo "<strong>Mảng sau khi xóa phần tử đầu tiên:</strong> " . implode(", ", $mangA) . "<br>";
+            echo '<p class="cauhoi">Mảng sau khi xóa phần tử đầu tiên:</p>';
+            echo '<p class="cautraloi" style="color: orange;">'.implode(", ", $mangA).'</p>';
 
-            // 4. Tính tổng các phần tử trong mảng
             $tong = array_sum($mangA);
-            echo "<strong>Tổng các phần tử trong mảng:</strong> $tong";
+            echo '<p class="cauhoi">Tổng các phần tử trong mảng:</p>';
+            echo '<p class="cautraloi" style="color: purple;">'.$tong.'</p>';
         }
     ?>
+    </div>
 </body>
 </html>
