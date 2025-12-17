@@ -29,7 +29,7 @@ class sinhvien {
         echo "<hr>Điểm trung bình:<br>";
         echo "Điểm môn 1: " . $this->diemmon1 . "<br>";
         echo "Điểm môn 2: " . $this->diemmon2 . "<br>";
-        echo "Điểm TB: " . $diemTB . " ";
+        echo "Điểm TB: " . $diemTB . " - ";
 
 
         if ($diemTB < 5){
