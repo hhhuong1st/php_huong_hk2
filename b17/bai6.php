@@ -29,9 +29,24 @@ class sinhvien {
         echo "<hr>Điểm trung bình:<br>";
         echo "Điểm môn 1: " . $this->diemmon1 . "<br>";
         echo "Điểm môn 2: " . $this->diemmon2 . "<br>";
-        echo "Điểm TB: " . $diemTB . "<br>";
+        echo "Điểm TB: " . $diemTB . " ";
+
+
+        if ($diemTB < 5){
+        echo "Không đạt <br> Xếp loại: Yếu ";
+        }
+        elseif ($diemTB <= 5 && $diemTB < 7){
+            echo "Đạt <br> Xếp loại: Trung bình";
+        }
+        elseif ($diemTB <= 7 && $diemTB < 8){
+            echo "Đạt <br> Xếp loại: Khá";
+        }
+        else{
+            echo "Đạt <br> Xếp loại: Giỏi";
+        }
+        }
 }
-}
+
 $sinhvien = new sinhvien("2430140006", "Huỳnh Huyền Hương", "24CDTKW01", 5, 6);
 
 // gọi
