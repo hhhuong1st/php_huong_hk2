@@ -32,9 +32,9 @@ class sinhvien {
     }
 }
 
-$sinhvien = new sinhvien("2430140006", "Huỳnh Huyền Hương", "24CDTKW01", 5, 6,8);
+    $sinhvien = new sinhvien("2430140006", "Huỳnh Huyền Hương", "24CDTKW01", 5, 6,8);
 
-// gọi
-$sinhvien->lay_all();
-$sinhvien->diemcaonhat();
+    // gọi
+    $sinhvien->lay_all();
+    $sinhvien->diemcaonhat();
 ?>
